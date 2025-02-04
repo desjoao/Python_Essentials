@@ -1,2 +1,2 @@
 # Python_Essentials
-Alguns estudos em Python
+O repositório tem o objetivo de arquivar alguns estudos em Python que faço.
