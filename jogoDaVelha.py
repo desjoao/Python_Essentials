@@ -28,7 +28,7 @@ def movimento(tabuleiro):
 		if not ok:	#está ocupado - para a entrada novamente
 			print("Campo já ocupado – repita sua entrada!")
 			continue
-    tabuleiro[linha][coluna] = 'O' 	# define '0' no quadrado selecionado
+		tabuleiro[linha][coluna] = 'O' 	# define '0' no quadrado selecionado
 
 
 def camposLivres(tabuleiro):
@@ -51,20 +51,20 @@ def defineVencedor(tabuleiro, valor):
 	for lincol in range(3):
 		if tabuleiro[lincol][0] == valor and tabuleiro[lincol][1] == valor and tabuleiro[lincol][2] == valor:	# verifica a linha lincol
 			return quem
-		if board[0][lincol] == valor and tabuleiro[1][lincol] == valor and tabuleiro[2][lincol] == valor: # verifica a coluna lincol
+		if tabuleiro[0][lincol] == valor and tabuleiro[1][lincol] == valor and tabuleiro[2][lincol] == valor: # verifica a coluna lincol
 			return quem
 		if tabuleiro[lincol][lincol] != valor: # verifica a 1ª diagonal
 			diagonal1 = False
 		if tabuleiro[2 - lincol][2 - lincol] != valor: # verifica a segunda diagonal
-			digonal2 = False
-	if diagonal or diagonal:
+			diagonal2 = False
+	if diagonal1 or diagonal2:
 		return quem
 	return None
 
 
 def movimenta(tabuleiro):
 	livres = camposLivres(tabuleiro) #faça uma lista de campos livres
-	cnt = len(free)
+	cnt = len(livres)
 	if cnt > 0:	
 		this = randrange(cnt)
 		linha, coluna = livres[this]
@@ -77,7 +77,7 @@ turno = True # que turno é agora?
 while len(livres):
 	imprimirTabuleiro(tabuleiro)
 	if turno:
-		movimento(board)
+		movimento(tabuleiro)
 		vencedor = defineVencedor(tabuleiro,'O')
 	else:	
 		movimenta(tabuleiro)
