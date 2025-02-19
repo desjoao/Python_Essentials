@@ -10,5 +10,8 @@ for char in texto:
         code = ord('A')
     cipher += chr(code)
 
-print(f'Texto criptografado: {cipher}')
+
+arquivo = open("cripto.txt", "w")
+arquivo.write(f"{cipher}")
+
 
