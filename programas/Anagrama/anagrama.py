@@ -1,3 +1,5 @@
+import sys
+
 def entrada():
     try:
         entrada1 = input("Insira o primeiro texto: ")
@@ -16,7 +18,7 @@ def entrada():
 
     except Exception as e:
         print (f'Um erro ocorreu: {e}')
-        exit()
+        sys.exit()
 
 def anagrama(a, b):
     try:
@@ -28,12 +30,12 @@ def anagrama(a, b):
 
         if valor1 == valor2 != 0:
             print('São anagramas.')
-            exit()
+            sys.exit()
         print('Não são anagramas.')
 
     except Exception as e:
         print(f'Um erro ocorreu: {e}.')
-        exit()
+        sys.exit()
 
 if __name__ == '__main__':
     entrada()
