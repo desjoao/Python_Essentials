@@ -26,7 +26,7 @@ def anagrama(a, b):
         for char in b:
             valor2 += ord(char)
 
-        if valor1 == valor2:
+        if valor1 == valor2 != 0:
             print('São anagramas.')
             exit()
         print('Não são anagramas.')
