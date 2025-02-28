@@ -1,5 +1,3 @@
-from datetime import date
-
 class digit_of_life:
     def __init__(self) -> None:
         try:
