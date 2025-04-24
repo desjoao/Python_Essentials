@@ -39,10 +39,12 @@ class Timer:
             self.second -= 1
 
 
-# Test the class
-timer = Timer(23, 59, 59)
-print(timer)         # 23:59:59
-timer.next_second()
-print(timer)         # 00:00:00
-timer.prev_second()
-print(timer)         # 23:59:59
+if __name__ == '__main__':
+
+    # Test the class
+    timer = Timer(23, 59, 59)
+    print(timer)         # 23:59:59
+    timer.next_second()
+    print(timer)         # 00:00:00
+    timer.prev_second()
+    print(timer)         # 23:59:59
